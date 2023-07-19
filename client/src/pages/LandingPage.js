@@ -22,7 +22,7 @@ const LandingPage = () => {
         email,
         password,
       };
-      const result = await axios.post("("https://news17.onrender.com/api/users/login", payload);
+      const result = await axios.post("https://news17.onrender.com/api/users/login", payload);
       const userData = { ...result.data };
       delete userData.password;
       toast("Login Successful");
