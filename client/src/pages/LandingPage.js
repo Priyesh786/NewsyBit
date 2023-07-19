@@ -42,7 +42,7 @@ const LandingPage = () => {
         password,
         name,
       };
-      await axios.post("/api/users/register", payload);
+      await axios.post("https://news17.onrender.com/api/users/register", payload);
       toast("Registration Successful, Please login");
       setName("");
       setEmail("");
