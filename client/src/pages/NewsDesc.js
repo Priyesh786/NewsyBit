@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../components/Spinner";
 import draftToHtml from 'draftjs-to-html';
-import ReactHtmlParser from 'react-html-parser';
+import parse from 'html-react-parser';
 
 const NewsDesc = () => {
   const [loading, setloading] = useState(false);
@@ -36,7 +36,7 @@ const NewsDesc = () => {
           <div className="p-5">
             <h1 className="my-3 text-2xl font-semibold">{newsItem.title}</h1>
             <hr />
-           {ReactHtmlParser(draftToHtml(JSON.parse(newsItem.content)))}
+            {parse(draftToHtml(JSON.parse(newsItem.content)))}
           </div>
         )
       )}
