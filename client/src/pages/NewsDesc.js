@@ -12,7 +12,7 @@ const NewsDesc = () => {
   const getData = async () => {
     setloading(true);
     try {
-      const result = await axios.post("/api/newsItems/getnewsitembyid", {
+      const result = await axios.post(`${apiUrl}/api/newsItems/getnewsitembyid`, {
         newsid: params.newsid,
       });
       setloading(false);
