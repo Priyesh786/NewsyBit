@@ -14,7 +14,7 @@ const PostedNewsitems = () => {
   const getData = async () => {
     setloading(true);
     try {
-      const result = await axios.post("/api/newsItems/getnewsitembyuserid", {
+      const result = await axios.post(`${apiUrl}/api/newsItems/getnewsitembyuserid`, {
         userid: user._id,
       });
       setloading(false);
@@ -33,7 +33,7 @@ const PostedNewsitems = () => {
     setloading(true);
     const apiUrl = process.env.REACT_APP_API_URL;
     try {
-      const result = await axios.post("/api/newsItems/deletenewsItem", {
+      const result = await axios.post(`${apiUrl}/api/newsItems/deletenewsItem`, {
         newsid,
       });
       setloading(false);
