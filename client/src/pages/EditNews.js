@@ -17,7 +17,9 @@ function EditNews() {
   const [loading, setloading] = useState(false)
   const params = useParams()
   const navigate = useNavigate()
+  const apiUrl = process.env.REACT_APP_API_URL;
   const user = JSON.parse(localStorage.getItem('Newsybit-user'))
+  
   const save = async () => {
     setloading(true)
     try {
