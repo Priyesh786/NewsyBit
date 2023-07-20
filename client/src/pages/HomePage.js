@@ -10,6 +10,7 @@ function HomePage() {
   const [newsItems, setNewsItems] = useState([]);
   const [SearchText, setSearchText] = useState('');
   const navigate = useNavigate()
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const getData = async () => {
     setloading(true);
