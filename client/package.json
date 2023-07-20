@@ -49,5 +49,4 @@
   "devDependencies": {
     "tailwindcss": "^3.3.3"
   },
-  "proxy": "https://news17.onrender.com"
 }
