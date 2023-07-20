@@ -17,6 +17,8 @@ function AddNews() {
   const [loading, setloading] = useState(false)
   const navigate = useNavigate()
   const user = JSON.parse(localStorage.getItem('Newsybit-user'))
+  const apiUrl = process.env.REACT_APP_API_URL;
+  
   const save = async () => {
     setloading(true)
     try {
