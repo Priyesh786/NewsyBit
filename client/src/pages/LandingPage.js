@@ -14,6 +14,7 @@ const LandingPage = () => {
   const [password, setPassword] = useState("");
   const [loading, setloading] = useState(false);
   const navigate = useNavigate();
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const login = async () => {
     try {
@@ -22,7 +23,7 @@ const LandingPage = () => {
         email,
         password,
       };
-      const result = await axios.post("https://news17.onrender.com/api/users/login", payload);
+      const result = await axios.post(`${apiUrl}/api/users/login`, payload);
       const userData = { ...result.data };
       delete userData.password;
       toast("Login Successful");
@@ -42,7 +43,7 @@ const LandingPage = () => {
         password,
         name,
       };
-      await axios.post("https://news17.onrender.com/api/users/register", payload);
+      await axios.post(`${apiUrl}/api/users/register`, payload);
       toast("Registration Successful, Please login");
       setName("");
       setEmail("");
