@@ -10,6 +10,7 @@ const PostedNewsitems = () => {
   const [newsItems, setNewsItems] = useState([]);
   const user = JSON.parse(localStorage.getItem("Newsybit-user"));
   const navigate = useNavigate();
+  const apiUrl = process.env.REACT_APP_API_URL;
   const getData = async () => {
     setloading(true);
     try {
@@ -30,6 +31,7 @@ const PostedNewsitems = () => {
 
   const deleteItem = async (newsid) => {
     setloading(true);
+    const apiUrl = process.env.REACT_APP_API_URL;
     try {
       const result = await axios.post("/api/newsItems/deletenewsItem", {
         newsid,
