@@ -15,7 +15,7 @@ function HomePage() {
   const getData = async () => {
     setloading(true);
     try {
-      const result = await axios.get("/api/newsItems/getallnewsItem");
+      const result = await axios.get(`${apiUrl}/api/newsItems/getallnewsItem`);
       setloading(false);
       setNewsItems(result.data);
     } catch (error) {
