@@ -33,7 +33,7 @@ const Profile = () => {
         currentPassword: currentPassword,
         newPassword: newPassword,
       };
-      const response = await axios.post('/api/users/changepassword', payload);
+      const response = await axios.post(`${apiUrl}/api/users/changepassword`, payload);
       console.log('Response:', response.data);
       setloading(false);
       toast("Password Changed Successfully, Please Login")
