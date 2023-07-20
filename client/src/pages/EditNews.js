@@ -33,7 +33,7 @@ function EditNews() {
         newsid : params.newsid
       };
      
-      await axios.post('/api/newsItems/editnewsItem', payload);
+      await axios.post(`${apiUrl}/api/newsItems/editnewsItem`, payload);
       setloading(false)
       toast('News Edited Successfully', 'success')
       navigate('/home')
@@ -46,7 +46,7 @@ function EditNews() {
   const getData = async () => {
     setloading(true);
     try {
-      const result = await axios.post("/api/newsItems/getnewsitembyid", {
+      const result = await axios.post(`${apiUrl}/api/newsItems/getnewsitembyid`, {
         newsid: params.newsid,
       });
       setloading(false);
