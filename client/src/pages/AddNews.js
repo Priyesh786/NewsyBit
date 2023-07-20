@@ -33,7 +33,7 @@ function AddNews() {
         }
       };
      
-      await axios.post('/api/newsItems/addnewsItem', payload);
+      await axios.post(`${apiUrl}/api/newsItems/addnewsItem`, payload);
       setloading(false)
       toast('News Added Successfully', 'success')
       navigate('/home')
