@@ -19,7 +19,6 @@ const PostedNewsitems = () => {
       });
       setloading(false);
       setNewsItems(result.data);
-      console.log(result.data);
     } catch (error) {
       console.log(error);
       setloading(false);
