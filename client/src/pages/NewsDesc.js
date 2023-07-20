@@ -9,6 +9,7 @@ import parse from 'html-react-parser';
 const NewsDesc = () => {
   const [loading, setloading] = useState(false);
   const [newsItem, setNewsItem] = useState();
+  const apiUrl = process.env.REACT_APP_API_URL;
   const getData = async () => {
     setloading(true);
     try {
